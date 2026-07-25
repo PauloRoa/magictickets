@@ -161,3 +161,5 @@ Según el reporte HTML oficial de JaCoCo (fuente de verdad definida por la guía
 - **Classes:** 100% (0 de 5 sin cubrir)
 
 **Nota sobre una discrepancia observada:** el plugin adicional `jacoco-console-reporter` (que imprime un resumen en la terminal al ejecutar `mvn clean test`) reporta 83,33% de cobertura de clases (5/6) en lugar de 100%. Esto ocurre porque ese plugin contabiliza `PurchaseNotifier` como una clase independiente sin instrucciones ejecutables (al ser una interfaz sin cuerpo de método), mientras que el reporte HTML oficial de JaCoCo no la computa de la misma forma. Se prioriza el reporte HTML por ser la fuente de verdad explícita de la guía de evaluación.
+
+![Reporte de cobertura JaCoCo](https://github.com/user-attachments/assets/ec1b7ad9-2fcf-4d1a-8dd3-bf987b38d698)
