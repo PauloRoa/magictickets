@@ -1,18 +1,23 @@
 package com.magictickets.domain;
+
 import com.magictickets.domain.exception.MaxTicketsExceededException;
 import com.magictickets.domain.exception.OutOfStockException;
 import com.magictickets.domain.exception.InvalidQuantityException;
 
-
 public class TicketPurchaseService {
 
-    public void purchase(Event event, int quantity) {     
-        
+    private final PurchaseNotifier notifier;
+
+    public TicketPurchaseService(PurchaseNotifier notifier) {
+        this.notifier = notifier;
+    }
+
+    public void purchase(Event event, int quantity) {
         validateQuantity(quantity);
         validateMaxTickets(quantity);
         validateStock(event, quantity);
         event.reduceStock(quantity);
-
+        notifier.notifyPurchase(event.getName(), quantity);
     }
 
     private void validateQuantity(int quantity) {
@@ -28,7 +33,7 @@ public class TicketPurchaseService {
     }
 
     private void validateStock(Event event, int quantity) {
-         if (quantity > event.getStock()) {
+        if (quantity > event.getStock()) {
             throw new OutOfStockException("Not enough tickets in stock, " + quantity + " tickets requested but only " + event.getStock() + " available");
         }
     }
