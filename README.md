@@ -248,6 +248,9 @@ Según el reporte HTML oficial de JaCoCo (fuente de verdad definida por la guía
 
 **Nota sobre una discrepancia observada:** el plugin adicional `jacoco-console-reporter` reporta cobertura de clases inferior a 100% en consola. Esto ocurre porque contabiliza las interfaces sin cuerpo (`EventRepository`, `PurchaseNotifier`) como clases independientes sin instrucciones ejecutables, mientras que el reporte HTML oficial de JaCoCo no las computa de la misma forma — mismo comportamiento ya documentado en el Hito 1. Se prioriza el reporte HTML por ser la fuente de verdad explícita de la guía de evaluación.
 
+![Reporte de cobertura JaCoCo - 100% en todos los paquetes]("https://github.com/user-attachments/assets/39789507-8c0a-4401-819d-813cfc8567b7")
+<img width="1484" height="357" alt="imagen" src="https://github.com/user-attachments/assets/39789507-8c0a-4401-819d-813cfc8567b7" />
+
 ---
 
 ## Continuidad del proyecto
