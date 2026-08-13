@@ -16,7 +16,7 @@ Proyecto correspondiente al **Hito 3** del módulo "Fundamentos de Calidad y TDD
 6. [Suite de tests](#suite-de-tests)
 7. [Comandos de ejecución](#comandos-de-ejecución)
 8. [Evidencia de cobertura](#evidencia-de-cobertura)
-
+9. [Continuidad del proyecto](#continuidad-del-proyecto)
 ---
 
 ## Arquitectura
